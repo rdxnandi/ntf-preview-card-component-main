@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--Very-dark-blue-main-BG);
+  font-family: "Outfit", sans-serif;
+  flex-direction: column;
+}
+
+.card {
+  background-color: var(--Very-dark-blue-card-BG);
+  color: var(--Soft-blue);
+  padding: 20px;
+  width: 310px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Image */
+.image {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.image img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.image div {
+  width: 100%;
+  height: calc(100% - 4px);
+  background-color: hsla(178, 100%, 50%, 55%);
+  position: absolute;
+  top: 0;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image div:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.image div img {
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Card Content */
+.content .title {
+  margin-bottom: 15px;
+  color: var(--White);
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.content .title:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+
+.content .para {
+  margin-bottom: 20px;
+  line-height: 1.4;
+  font-size: 16px;
+}
+
+.content .eth-time {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.content .eth {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.content .eth p {
+  color: var(--Cyan);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.content .time {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.content .time p {
+  font-size: 14px;
+}
+
+/* Horizonal line */
+.hr-line {
+  margin-bottom: 15px;
+  background-color: var(--Very-dark-blue-line);
+  height: 1px;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.content .avator {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.avator img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+}
+
+.avator p {
+  font-size: 14px;
+}
+
+.avator p span {
+  color: var(--White);
+}
+
+.avator p span:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
